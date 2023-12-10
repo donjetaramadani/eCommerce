@@ -1,0 +1,406 @@
+html,
+body {
+  font-size: 62.5%;
+  height: 150%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 3.2rem;
+  font-weight: 500;
+  color: #000;
+  background: #fff;
+  overscroll-behavior: none;
+  touch-action: pan-x;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+main {
+  flex: 1;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header-logo {
+  padding: 1rem;
+}
+
+.header-logo img {
+  max-width: 150px;
+  height: auto;
+  margin-top: -60px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+}
+
+.nav-links ul li:last-child {
+  margin-right: 0;
+}
+
+.nav-links ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links ul li a:hover {
+  color: #f44336;
+}
+
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.8s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: left;
+}
+
+button {
+  margin: 20px;
+  margin-left: -25px;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+  box-shadow: 5px 5px 1px rgba(117, 7, 7, 0.3);
+  font-weight: bold;
+}
+
+.btn-16 {
+  border: none;
+  color: #000;
+}
+
+.btn-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px rgba(173, 62, 62, 0.6), 7px 7px 20px 0px rgba(96, 1, 1, 0.133), 4px 4px 5px 0px rgba(152, 16, 16, 0.067);
+  transition: all 0.3s ease;
+}
+
+.btn-16:hover {
+  color: #000;
+}
+
+.btn-16:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.btn-16:active {
+  top: 2px;
+}
+
+/* Add your additional styles for other sections as needed */
+
+/* ... */
+
+/* Footer Section */
+.footer {
+  background-color: #24262b;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: auto;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li::not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+.footer-bottom {
+  position: relative;
+  background: #000;
+  width: 100%;
+  padding: 30px 0px 35px 0px;
+  text-align: center;
+  left: 0;
+  z-index: 9999;
+  flex-shrink: 0;
+  margin-top: 70px;
+  margin-bottom: -35px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.flex-space-between-center {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-space-between-stretch {
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.flex-center-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-start {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-center-center-column {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 112rem;
+  width: 100%;
+  align-items: start;
+  padding-top: 1rem;
+}
+
+/* Additional styles for other sections */
+
+/* ... */
+.content {
+    flex: 1;
+    padding-bottom: 200px;
+  }
+  
+  /* Updated CSS for the main content area */
+  
+  .main-content {
+    max-width: 800px; /* Adjust the max-width based on your design */
+    margin: auto;
+    padding: 40px; /* Add padding to give some space around the content */
+  }
+  
+  .main-content h1 {
+    font-size: 2.5rem; /* Increase the font size for main headings */
+    margin-bottom: 20px;
+  }
+  
+  .main-content p {
+    font-size: 1.6rem; /* Increase the font size for paragraphs */
+    line-height: 2.4rem; /* Adjust line height for better readability */
+    color: #333; /* Adjust text color as needed */
+  }
+  
+  /* Additional styling for other elements in the main content area */
+  
+  .main-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .card {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+    overflow: hidden;
+    width: 300px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 1rem;
+    color: #555;
+  }

@@ -1,0 +1,2 @@
+//Te Contact-Us fillimisht duhet te behesh Sign Up e pastaj Sign In.
+// Password duhet te permbaje dhe simbole psh: R$P2w#8sLx!5

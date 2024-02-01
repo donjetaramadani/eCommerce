@@ -68,26 +68,27 @@
 
                          </div>
 
+                         
                        <div class="hero-bg">
                              <div class="hero-bg-img">
-
+                                  <!--
                                    <div class="hero-bg-pg pg-1 position-absolute">
-                                         <img src="	https://yunicorn.vc/assets/home/hero-pigeon-1.png" alt="Flying Pigeo" class="img-fluid pigeons"/>
+                                         <img src="img/pigeon-1.png" alt="Flying Pigeo" class="img-fluid pigeons"/>
                                    </div>
 
                                    <div class="hero-bg-pg pg-2 position-absolute">
-                                       <img src="	https://yunicorn.vc/assets/home/hero-pigeon-2.png" alt="Flying Pigeo" class="img-fluid pigeons"/>
+                                       <img src="img/pigeon-2.png" alt="Flying Pigeo" class="img-fluid pigeons"/>
                                    </div>
 
                                    <div class="hero-bg-pg pg-3 position-absolute">
-                                       <img src="	https://yunicorn.vc/assets/home/hero-pigeon-3.png" alt="Flying Pigeon" class="img-fluid pigeons"/>
+                                       <img src="img/pigeon-3.png" alt="Flying Pigeon" class="img-fluid pigeons"/>
                                    </div>
 
                                    <div class="hero-bg-pg pg-4 position-absolute">
-                                       <img src="	https://yunicorn.vc/assets/home/hero-pigeon-4.png" alt="Flying Pigeon" class="img-fluid pigeons"/>
-                                   </div>
+                                       <img src="img/pigeon-4.png" alt="Flying Pigeon" class="img-fluid pigeons"/>
+                                   </div>-->
 
-                                 <img src="img/Ismail.png" alt="Hero Image of a Greek Archaic Statue" class="hero-bg-img-main img-fluid"/>
+                                 <img src="img/Ismail.png" alt="HeroIK" class="hero-bg-img-main img-fluid"/>
                                  
                              </div>
                        </div>
@@ -178,8 +179,18 @@
                     </p>
           
                   <div class="frame">
-                    <button class="custom-btn btn-5"><span>Read More</span></button>
+                  <button id="readMoreBtn" class="custom-btn btn-5"><span>Read More</span></button>
                   </div>
+
+
+                  <script>
+                  
+                    document.getElementById('readMoreBtn').addEventListener('click', function() {
+                      
+                      window.location.href = 'books.html';
+                    });
+                  </script>
+
              </article>
             
            
@@ -192,8 +203,20 @@
                     Elevate your space with artistry and depth.</p>
 
                   <div class="frame">
-                    <button class="custom-btn btn-5"><span>Read More</span></button>
+                    <button  id="readdMoreBtn" class="custom-btn btn-5"><span>Read More</span></button>
                   </div>
+
+
+
+                  <script>
+                  
+                    document.getElementById('readdMoreBtn').addEventListener('click', function() {
+                      
+                      window.location.href = 'canvas.html';
+                    });
+                  </script>
+
+
             </article>
         
         <article class="card">
@@ -204,8 +227,18 @@
                    <p>Unleash Creativity. Dive into vibrant hues and shades, from bold primaries to soft pastels, igniting your artistic vision on canvas.</p>
 
                   <div class="frame">
-                    <button class="custom-btn btn-5"><span>Read More</span></button>
+                    <button id="readddMoreBtn" class="custom-btn btn-5"><span>Read More</span></button>
                   </div>
+
+
+                  <script>
+                  
+                    document.getElementById('readddMoreBtn').addEventListener('click', function() {
+                      
+                      window.location.href = 'colors.html';
+                    });
+                  </script>
+
         </article>
 
 
@@ -218,8 +251,17 @@
                     Shape your masterpieces with the perfect tools at your fingertips.</p>
 
                     <div class="frame">
-                      <button class="custom-btn btn-5"><span>Read More</span></button>
+                      <button id="readdddMoreBtn" class="custom-btn btn-5"><span>Read More</span></button>
                     </div>
+
+                    <script>
+                  
+                      document.getElementById('readdddMoreBtn').addEventListener('click', function() {
+                        
+                        window.location.href = 'tools.html';
+                      });
+                    </script>
+  
         </article>
 
 

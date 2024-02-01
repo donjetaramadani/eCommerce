@@ -95,167 +95,86 @@
 
 
 
-   function validateForm(event) {
-       event.preventDefault(); 
+document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.ul_tabs > li');
+    const signUpForm = document.querySelector('#contactForm');
+    const signInForm = document.querySelector('#loginForm');
 
-       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-       const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+}{":;'?/>.<,])(?=.*[a-zA-Z]).{8,}$/;
+    function showForm(formToShow) {
+        const forms = [signInForm, signUpForm];
 
-       const name = document.querySelector('input[name="name_us"]').value;
-       const email = document.querySelector('input[name="email_us"]').value;
-       const password = document.querySelector('input[name="pass_us"]').value;
-       const confirmPassword = document.querySelector('input[name="conf_pass_us"]').value;
+        tabs.forEach(tab => tab.classList.remove('active'));
+        formToShow.style.display = 'block';
 
-       if (name.trim() === '') {
-           alert('Please enter your name.');
-           return;
-       }
+        forms.forEach(form => {
+            if (form !== formToShow) {
+                form.style.display = 'none';
+            }
+        });
+    }
 
-       if (!emailPattern.test(email)) {
-           alert('Please enter a valid email address.');
-           return;
-       }
+    tabs[0].addEventListener('click', function () {
+        showForm(signInForm);
+    });
 
-       if (!passwordPattern.test(password)) {
-           alert('Please enter a valid password (at least 8 characters, including uppercase, lowercase, numbers, and special characters).');
-           return;
-       }
+    tabs[1].addEventListener('click', function () {
+        showForm(signUpForm);
+    });
 
-       if (password !== confirmPassword) {
-           alert('Passwords do not match.');
-           return;
-       }
+    function validateForm(form, event) {
+        event.preventDefault();
 
-  
-       alert('Form submitted successfully!');
-   }
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+}{":;'?/>.<,])(?=.*[a-zA-Z]).{8,}$/;
 
-   document.querySelector('#contactForm').addEventListener('submit', validateForm);
+        const name = form.querySelector('input[name="name_us"]');
+        const surname = form.querySelector('input[name="surname_us"]');
+        const email = form.querySelector('input[name="email_us"]');
+        const password = form.querySelector('input[name="pass_us"]');
+        const confirmPassword = form.querySelector('input[name="conf_pass_us"]');
+
+        if (name && name.value.trim() === '') {
+            alert('Please enter your name.');
+            return;
+        }
+
+        if (surname && surname.value.trim() === '') {
+            alert('Please enter your surname.');
+            return;
+        }
+
+        if (email && !emailPattern.test(email.value)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        if (password && !passwordPattern.test(password.value)) {
+            alert('Please enter a valid password (at least 8 characters, including uppercase, lowercase, numbers, and special characters).');
+            return;
+        }
+
+        if (confirmPassword && password.value !== confirmPassword.value) {
+            alert('Passwords do not match.');
+            return;
+        }
+
+        // Your actual form submission logic
+        alert(`${form.id} submitted successfully!`);
+    }
+
+    signUpForm.addEventListener('submit', function (event) {
+        validateForm(signUpForm, event);
+    });
+
+    signInForm.addEventListener('submit', function (event) {
+        validateForm(signInForm, event);
+    });
+
+    // Other initialization logic
+    document.querySelector('.cont_centrar').classList.add('cent_active');
+});
 
 
-
-   let signInData = {
-       email: '',
-       password: '',
-       name: ''
-   };
-   
-   let signUpData = {
-       email: '',
-       password: '',
-       confirmPass: '',
-       name: '',
-       surname: ''
-   };
-   
-   function sign_up() {
-       var inputs = document.querySelectorAll('.input_form_sign');
-       document.querySelectorAll('.ul_tabs > li')[0].className = "";
-       document.querySelectorAll('.ul_tabs > li')[1].className = "active";
-   
-       for (var i = 0; i < inputs.length; i++) {
-           if (i == 2) {
-   
-           } else {
-               document.querySelectorAll('.input_form_sign')[i].className = "input_form_sign d_block";
-           }
-       }
-   
-       signUpData.email = document.querySelector('input[name="email_us"]').value;
-       signUpData.password = document.querySelector('input[name="pass_us"]').value;
-       signUpData.confirmPass = document.querySelector('input[name="conf_pass_us"]').value;
-       signUpData.name = document.querySelector('input[name="name_us"]').value;
-       signUpData.surname = document.querySelector('input[name="surname_us"]').value;
-   
-       setTimeout(function () {
-           for (var d = 0; d < inputs.length; d++) {
-               document.querySelectorAll('.input_form_sign')[d].className = "input_form_sign d_block active_inp";
-           }
-       }, 100);
-
-       document.querySelector('.link_forgot_pass').style.opacity = "0";
-       document.querySelector('.link_forgot_pass').style.top = "-5px";
-       document.querySelector('.btn_sign').innerHTML = "SIGN UP";
-
-       setTimeout(function () {
-           document.querySelector('.terms_and_cons').style.opacity = "1";
-           document.querySelector('.terms_and_cons').style.top = "5px";
-       }, 500);
-
-       setTimeout(function () {
-           document.querySelector('.link_forgot_pass').className = "link_forgot_pass d_none";
-           document.querySelector('.terms_and_cons').className = "terms_and_cons d_block";
-       }, 450);
-
-   }
-   
-   function sign_in() {
-       var inputs = document.querySelectorAll('.input_form_sign');
-       document.querySelectorAll('.ul_tabs > li')[0].className = "active";
-       document.querySelectorAll('.ul_tabs > li')[1].className = "";
-   
-       for (var i = 0; i < inputs.length; i++) {
-           switch (i) {
-               case 1:
-                   console.log(inputs[i].name);
-                   break;
-               case 2:
-                   console.log(inputs[i].name);
-               default:
-                   document.querySelectorAll('.input_form_sign')[i].className = "input_form_sign d_block";
-           }
-       }
-   
-       signInData.email = document.querySelector('input[name="email_us"]').value;
-       signInData.password = document.querySelector('input[name="pass_us"]').value;
-       signInData.name = document.querySelector('input[name="name_us"]').value;
-   
-       setTimeout(function () {
-           for (var d = 0; d < inputs.length; d++) {
-               switch (d) {
-                   case 1:
-                       console.log(inputs[d].name);
-                       break;
-                   case 2:
-                       console.log(inputs[d].name);
-                   default:
-                       document.querySelectorAll('.input_form_sign')[d].className = "input_form_sign d_block";
-                       document.querySelectorAll('.input_form_sign')[2].className = "input_form_sign d_block active_inp";
-               }
-           }
-       }, 100);
-   
-       document.querySelector('.terms_and_cons').style.opacity = "0";
-       document.querySelector('.terms_and_cons').style.top = "-5px";
-   
-       setTimeout(function () {
-           document.querySelector('.terms_and_cons').className = "terms_and_cons d_none";
-           document.querySelector('.link_forgot_pass').className = "link_forgot_pass d_block";
-       }, 500);
-   
-       setTimeout(function () {
-           document.querySelector('.link_forgot_pass').style.opacity = "1";
-           document.querySelector('.link_forgot_pass').style.top = "5px";
-   
-           for (var d = 0; d < inputs.length; d++) {
-               switch (d) {
-                   case 1:
-                       console.log(inputs[d].name);
-                       break;
-                   case 2:
-                       console.log(inputs[d].name);
-                       break;
-                   default:
-                       document.querySelectorAll('.input_form_sign')[d].className = "input_form_sign";
-               }
-           }
-       }, 1500);
-       document.querySelector('.btn_sign').innerHTML = "SIGN IN";
-   }
-   
- window.onload =function(){
-   document.querySelector('.cont_centrar').className = "cont_centrar cent_active";
-}
 
 
 function truncateText(text, letters = 135) {

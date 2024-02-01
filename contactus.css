@@ -1,7 +1,7 @@
 html,
 body {
   font-size: 62.5%;
-  height: 100%;
+  height: 20%;
   margin: 0;
   padding: 0;
 }
@@ -23,19 +23,19 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 20vh;
 
 }
 
 html {
-  height: 100%;
+  height: 20%;
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 20%;
   display: flex;
   flex-direction: column;
 }
@@ -155,6 +155,7 @@ ul{
   flex-shrink: 0;
   color: #ffffff;
   text-align: center;
+  bottom: -200px;
 }
 
 .footer-col{
@@ -907,7 +908,7 @@ text-transform: capitalize;
   position: absolute;
   width: 400px;
   left:50%;
-  top:160%;
+  top:170%;
   margin-left: -160px;
   margin-top: -40px;
 }
@@ -916,7 +917,7 @@ text-transform: capitalize;
   position: absolute;
   left: 60%;
   width: 800px;
-  height: 700px;
+  height: 800px;
   top: 40%;
   transform: translate(-50%, -50%);
  /* float: left;*/
@@ -924,6 +925,8 @@ text-transform: capitalize;
   background-image: linear-gradient(-5deg, #f0e1e1 8%, #cedee3 100%);
   border-radius: 8px;
   transition: all 0.5s;
+  padding-top: 50px;
+  padding-left: 50px;
 }
 
 .cent_active {
@@ -934,6 +937,8 @@ text-transform: capitalize;
   position: relative;
   float: left;
   width: 100%;
+  margin-top: -255px; 
+
 }
 
 .ul_tabs > li { 
@@ -979,7 +984,8 @@ transition: all 0.5s;
   position: relative;
   float: left;
   width: 100%;
-  margin-top: 20px;
+  margin-top: -100px;
+  margin-left: -65px;
 }
 
 .input_form_sign {
@@ -1036,7 +1042,7 @@ transition: all 0.5s;
   margin-top: 20px;
   margin-bottom: 20px;
   cursor: pointer;
-  width: 200px; /* Adjust the width as needed */
+  width: 200px; 
   margin: 35px auto 0 250px;
 }
 
@@ -1283,4 +1289,11 @@ img {
 
 .orange-text {
   color: orange;
+}
+
+
+
+.cont_btn {
+  /* Add this class for margin-top */
+  margin-top: 255px;
 }

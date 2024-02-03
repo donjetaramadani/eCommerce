@@ -13,30 +13,47 @@
 
 
   <style>
-  
-    html,
-    body {
-      font-size: 62.5%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
 
-    p {
-      margin-bottom: 1rem;
-      font-size: initial;
-      line-height: 1.6;
-      text-rendering: optimizeLegibility;
-      color: #000;
-      margin-top: 40px;
-      font-family: 'Roboto', sans-serif;
-    }
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: initial;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  color: #000;
+  margin-top: 40px;
+  font-family: 'Roboto', sans-serif;
+}
 
 
-    h1{
-      margin-top: 100px;
-      font-family: 'Times New Roman', sans-serif;
-    }
+h1{
+  margin-top: 100px;
+  font-family: 'Times New Roman', sans-serif;
+}
+
+
+.footer {
+  background-color: #24262b;
+  padding: 20px 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2100px;
+ 
+  flex-shrink: 0;
+  color: #ffffff;
+  text-align: center;
+}
   </style>
 
 </head>
@@ -61,7 +78,7 @@
                   <li><a href="shop.php">SHOP</a></li>
                   <li><a href="contactus.php">CONTACT</a></li>
                   <li><a href="shopping-cart.php"><i class="fas fa-shopping-cart"></i></a></li>
-                  <li><a href="dashboard.php"><i class="fas fa-user"></i></a></li>
+                  <li><a href="login.php"><i class="fas fa-user"></i></a></li>
                 </ul>
               </nav>
             </div>

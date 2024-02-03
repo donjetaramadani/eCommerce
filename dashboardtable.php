@@ -2,7 +2,6 @@
  
   include('functions.php');
 
-  // Check if the user is logged in
   if (!isLoggedIn()) {
       header('location: login.php');
   }

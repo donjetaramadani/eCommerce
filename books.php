@@ -9,7 +9,33 @@
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="./books.css">
+  <link rel="stylesheet" href="books.css">
+
+<style>
+
+
+
+.footer {
+  background-color: #24262b;
+  padding: 20px 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 1900px;
+ 
+  flex-shrink: 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+</style>
+
+
+
 </head>
 
 <body>

@@ -10,9 +10,9 @@ if (!isLoggedIn()) {
 include_once 'userRepository.php';
 $userRepository = new UserRepository();
 
-// Handle CRUD operations
+//CRUD
 if (isset($_POST['add_user'])) {
-    // Add user
+   
     $user = array(
         'username' => $_POST['username'],
         'email' => $_POST['email'],
@@ -34,7 +34,7 @@ if (isset($_POST['update_user'])) {
 }
 
 if (isset($_GET['delete_user'])) {
-    // Delete user
+    
     $user_id = $_GET['delete_user'];
     $userRepository->deleteUser($user_id);
 }
@@ -83,9 +83,10 @@ if (isset($_GET['delete_user'])) {
                     <td><?php echo $user['email']; ?></td>
                     <td><?php echo $user['user_type']; ?></td>
                     <td>
-                        <a href="edit_user.php?id=<?php echo $user['id']; ?>">Edit</a>
-                        <a href="?delete_user=<?php echo $user['id']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
+                      <a href="edit_user.php?id=<?php echo $user['id']; ?>" style="color: red;">Edit</a>
+                      <a href="?delete_user=<?php echo $user['id']; ?>" style="color: blue;" onclick="return confirm('Are you sure?')">Delete</a>
                     </td>
+
                 </tr>
             <?php endforeach; ?>
         </tbody>

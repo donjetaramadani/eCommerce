@@ -9,6 +9,29 @@
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="./canvas.css">
+
+<style>
+
+
+
+.footer {
+  background-color: #24262b;
+  padding: 20px 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2200px;
+ 
+  flex-shrink: 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+</style>
 </head>
 
 <body>
@@ -31,7 +54,7 @@
                   <li><a href="shop.php">SHOP</a></li>
                   <li><a href="contactus.php">CONTACT</a></li>
                   <li><a href="shopping-cart.php"><i class="fas fa-shopping-cart"></i></a></li>
-                  <li><a href="dashboard.php"><i class="fas fa-user"></i></a></li>
+                  <li><a href="login.php"><i class="fas fa-user"></i></a></li>
                 </ul>
               </nav>
             </div>

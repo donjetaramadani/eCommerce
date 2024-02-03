@@ -35,6 +35,22 @@
       background: #37474F;
       color: #ffffff;
     }
+
+
+    .container {
+    width: 1100px;
+    margin-left: 350px;
+    margin-top: 100px;
+}
+
+
+@media (max-width: 992px) {
+    .container {
+        width: 700px; 
+        margin-left: 200px; 
+    }
+}
+
   </style>
 </head>
 <body>
@@ -50,16 +66,13 @@
 
 
       <ul class="nav">
-            <li>
-                <a href="#">
-                    <i class="zmdi zmdi-view-dashboard"></i> Dashboard
-                </a>
-             </li>
-            <li>
-                <a href="#">
-                    <i class="zmdi zmdi-account"></i> User Management
-                </a>
-            </li>
+          
+            <li><a href="dashboardtable.php"><i class="zmdi zmdi-view-dashboard"></i> Dashboard</a></li>
+            
+            
+            <li><a href="user_management.php"><i class="zmdi zmdi-account"></i> User Management</a></li>
+
+
             <li>
                 <a href="#">
                     <i class="zmdi zmdi-comment-more"></i> Contact
@@ -102,17 +115,10 @@
              </div>
         </nav>
 
-      <div class="container-fluid">
-        <h1>Simple Sidebar</h1>
-        <p>
-          Make sure to keep all page content within the 
-          <code>#content</code>.
-        </p>
-      </div>
     </div>
   </div>
 
-
+ 
 
 
 </body>

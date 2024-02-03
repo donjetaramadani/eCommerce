@@ -167,3 +167,13 @@ function isAdmin()
                 return false;
         }
 }
+
+
+
+function displayUserData() {
+        global $db;
+        $query = "SELECT * FROM users";
+        $result = mysqli_query($db, $query);
+    
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }

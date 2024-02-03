@@ -1,34 +1,3 @@
-<?php
-// Include the database connection file at the beginning
-include_once('db_connection.php');
-
-// Handle form submissions
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['register'])) {
-        // Handle registration form
-        $name = $_POST['name_us'];
-        $surname = $_POST['surname_us'];
-        $email = $_POST['email_us'];
-        $password = password_hash($_POST['pass_us'], PASSWORD_DEFAULT); // Hash the password
-
-        $sql = "INSERT INTO users (name, surname, email, password) VALUES ('$name', '$surname', '$email', '$password')";
-
-        if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-    } elseif (isset($_POST['login'])) {
-        // Handle login form
-        // Add your login logic here
-    }
-}
-
-// ... rest of your PHP code
-
-// Close the connection when done (optional, as PHP automatically closes connections when the script finishes)
-$conn->close();
-?>
 
 
 
@@ -179,37 +148,34 @@ $conn->close();
                       </div>
      
 
-         <!-- Combined Login/Register Form -->
+  
     <div class="cont_principal">
         <div class="cont_centrar">
             <div class="cont_login">
                 <form action="contactus.php" method="POST">
 
-                    <!-- Registration Form Fields -->
-                    <!-- ... your existing registration form fields ... -->
-
+     
                     <div class="cont_btn">
                         <button id="register" type="button" class="btn-7" name="register"><span>REGISTER</span></button>
                     </div>
 
-                    <!-- Script to redirect to register.php -->
+          
                     <script>
                         document.getElementById('register').addEventListener('click', function () {
-                            window.location.href = 'rregister.php';
+                            window.location.href = 'register.php';
                         });
                     </script>
 
-                    <!-- Login Form Fields -->
-                    <!-- ... your existing login form fields ... -->
+                  
 
                     <div class="cont_btn">
-                        <button id="signin" type="button" class="btn-7" name="login"><span>SIGN IN</span></button>
+                        <button id="login" type="button" class="btn-7" name="login"><span>Login</span></button>
                     </div>
 
-                    <!-- Script to redirect to signin.php -->
+               
                     <script>
-                        document.getElementById('signin').addEventListener('click', function () {
-                            window.location.href = 'signin.php';
+                        document.getElementById('login').addEventListener('click', function () {
+                            window.location.href = 'login.php';
                         });
                     </script>
                 </form>

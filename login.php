@@ -1,39 +1,36 @@
-<?php
-// Include the database connection file at the beginning
-include_once('db_connection.php');
+<?php include('functions.php') ?>
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Registration system PHP and MySQL</title>
+        <link rel="stylesheet" type="text/css" href="stylee.css">
+</head>
+<body>
 
-// Handle login form submissions
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+<div class="container">
+        <div class="header">
+                <h2>Login</h2>
+                <img src="img/IsmailKadare-logos_white.png" alt="LogoIK"/>
+        </div>
+        <form method="post" action="login.php">
 
-    // Validate form data
-    if (empty($username) || empty($password)) {
-        echo "Username and password are required";
-        exit;
-    }
+                <?php echo display_error(); ?>
 
-    // Check if the user exists in the database
-    $sql = "SELECT * FROM users WHERE email = '$username'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-
-        // Verify the password
-        if (password_verify($password, $row['password'])) {
-            // Password is correct, handle login success
-            echo "Login successful";
-        } else {
-            // Incorrect password, handle login failure
-            echo "Invalid password";
-        }
-    } else {
-        // User not found, handle login failure
-        echo "User not found";
-    }
-}
-
-// Close the connection when done (optional, as PHP automatically closes connections when the script finishes)
-$conn->close();
-?>
+                <div class="input-group">
+                        <label>Username</label>
+                        <input type="text" name="username" >
+                </div>
+                <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" name="password">
+                </div>
+                <div class="input-group">
+                        <button type="submit" class="btn" name="login_btn">Login</button>
+                </div>
+                <p>
+                        Not yet a member? <a href="register.php">Sign up</a>
+                </p>
+        </form>
+        </div>
+</body>
+</html>

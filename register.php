@@ -1,40 +1,55 @@
-<?php
-// Include the database connection file at the beginning
-include_once('db_connection.php');
+<?php include('functions.php') ?>
 
-// Handle registration form submissions
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name_us'];
-    $surname = $_POST['surname_us'];
-    $email = $_POST['email_us'];
-    $password = $_POST['pass_us'];
-    $confirmPassword = $_POST['conf_pass_us'];
 
-    // Validate form data
-    if (empty($name) || empty($surname) || empty($email) || empty($password) || empty($confirmPassword)) {
-        echo "All fields are required";
-        exit;
-    }
 
-    // Check if passwords match
-    if ($password !== $confirmPassword) {
-        echo "Passwords do not match";
-        exit;
-    }
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Registration system PHP and MySQL</title>
+        <link rel="stylesheet" href="stylee.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    // Hash the password securely
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    // Insert user data into the database
-    $sql = "INSERT INTO users (name, surname, email, password, role) VALUES ('$name', '$surname', '$email', '$hashedPassword', 'user')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Registration successful";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-}
+</head>
+<body>
 
-// Close the connection when done (optional, as PHP automatically closes connections when the script finishes)
-$conn->close();
-?>
+<div class="container">
+<div class="header">
+        <h2>Register</h2>
+        <img src="img/IsmailKadare-logos_white.png" alt="LogoIK"/>
+</div>
+<form method="post" action="register.php">
+        <div class="input-group">
+                <label>Username</label>
+                <input type="text" name="username" value="<?php echo $username; ?>">
+        </div>
+        <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" value="<?php echo $email; ?>">
+        </div>
+        <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password_1">
+        </div>
+        <div class="input-group">
+                <label>Confirm password</label>
+                <input type="password" name="password_2">
+        </div>
+        <div class="input-group">
+                <button type="submit" class="btn" name="register_btn">Register</button>
+        </div>
+        <p>
+                Already a member? <a href="login.php">Sign in</a>
+        </p>
+</form>
+</div>
+
+
+
+<form method="post" action="register.php">
+        <?php echo display_error(); ?>
+
+</form>
+</body>
+</html>

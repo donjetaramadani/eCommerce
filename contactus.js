@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // Your actual form submission logic
+
         alert(`${form.id} submitted successfully!`);
     }
 
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
         validateForm(signInForm, event);
     });
 
-    // Other initialization logic
+ 
     document.querySelector('.cont_centrar').classList.add('cent_active');
 });
 

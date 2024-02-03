@@ -1,6 +1,3 @@
-<!-- header.php -->
-
-
 
 <header class="header">
                <div class="header-container flex flex-space-between-center">

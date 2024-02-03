@@ -10,10 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./tools.css">
-
-
-  <style>
-
+<style>
 html,
 body {
   font-size: 62.5%;
@@ -54,7 +51,7 @@ h1{
   color: #ffffff;
   text-align: center;
 }
-  </style>
+</style>
 
 </head>
 
@@ -143,9 +140,6 @@ h1{
   </div>
 
 
-
-
- 
 <?php include('footer.php'); ?>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>

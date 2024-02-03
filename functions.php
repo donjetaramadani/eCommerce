@@ -177,3 +177,25 @@ function displayUserData() {
     
         return mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
+
+
+
+    /**password validation form 
+     * This form ensures that the password meets the criteria of having at least 8 characters, one uppercase letter, one lowercase letter, one digit, and one special character.
+     * 
+     * 
+     * 
+     *  function validatePassword() {
+     *  const password = document.getElementById("password").value;
+     *  const passwordError = document.getElementById("passwordError");
+     *  Define regex for password validation
+     *  const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+     *  Check if the password matches the regex
+     *  if (passwordRegex.test(password)) {
+     *  passwordError.textContent = "";
+     *  } else {
+     *  passwordError.textContent = "Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one digit, and one special character.";
+     *  }
+     *  }
+     * 
+     */

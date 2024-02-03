@@ -376,8 +376,8 @@ text-transform: capitalize;
 }
 
 .content-holder {
-  min-height: calc(100vh - 100px); /* Adjust based on your footer height */
-  padding-bottom: 150px; /* Adjust padding bottom as needed */
+  min-height: calc(100vh - 100px); 
+  padding-bottom: 150px;
 }
 
 .content-top,
@@ -786,7 +786,7 @@ text-transform: capitalize;
 }
 
 .ms-slide__link {
-  font-size: 10px; /* Adjust the font size as needed */
+  font-size: 10px;
 }
 
 

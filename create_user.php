@@ -2,16 +2,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Registration system PHP and MySQL - Create user</title>
-        <link rel="stylesheet" type="text/css" href="../stylee.css">
-        <style>
-                .header {
-                        background: #003366;
-                }
-                button[name=register_btn] {
-                        background: #003366;
-                }
-        </style>
+<title>Registration system PHP and MySQL - Create user</title>
+<link rel="stylesheet" type="text/css" href="../stylee.css">
+<style>
+.header {
+        background: #003366;
+}
+button[name=register_btn] {
+        background: #003366;
+}
+</style>
 </head>
 <body>
         <div class="header">

@@ -38,4 +38,3 @@ Authors
 
 Donjeta Ramadani
 
-Bleta Sylejmani
